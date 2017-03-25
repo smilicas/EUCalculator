@@ -160,10 +160,15 @@ public class MainActivity extends AppCompatActivity
         View view = findViewById(R.id.circle);
         GradientDrawable circle = (GradientDrawable) view.getBackground();
         if(number > 30){
-            circle.setColor(getResources().getColor(R.color.colorPrimaryDark));
+            circle.setColor(getResources().getColor(R.color.Green));
         }
-        else{
-            circle.setColor(getResources().getColor(R.color.colorAccent));
+
+        if(number < 30 && number > 15){
+            circle.setColor(getResources().getColor(R.color.Yellow));
+        }
+
+        if(number < 15){
+            circle.setColor(getResources().getColor(R.color.Red));
         }
     }
 
@@ -251,7 +256,8 @@ public class MainActivity extends AppCompatActivity
     private void updateRemainingDays(){
 
         TextView numOrRemainDays = (TextView) findViewById(R.id.txt_noOfDays);
-        long days = calculteRemainingDays();
+        int days = (int)calculteRemainingDays();
+        updateCircle(days);
         numOrRemainDays.setText(String.valueOf(days));
     }
 
