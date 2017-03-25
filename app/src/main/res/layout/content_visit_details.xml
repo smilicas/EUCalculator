@@ -1,0 +1,97 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.milica.eucalculator.VisitDetailsActivity"
+    tools:showIn="@layout/activity_visit_details">
+
+    <RelativeLayout
+        android:paddingTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCounty"
+            android:layout_marginTop="30dp"
+            android:text="Zemlja" />
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/out_country"
+            android:layout_below="@id/textCounty"
+            android:layout_marginTop="10dp"
+            android:textSize="50px"
+            android:text="Nemacka" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textDescName"
+            android:layout_marginTop="20dp"
+            android:text="Razlog posete"
+            android:layout_below="@id/out_country" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textDesc"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Opis posete"
+            android:layout_below="@id/textDescName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDate"
+            android:layout_marginTop="10dp"
+            android:text="Datum boravka"
+            android:layout_below="@id/textDesc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtEnterDate"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Datum ulaska"
+            android:layout_below="@id/txtDate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtExitDate"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Datum izlaska"
+            android:layout_below="@id/txtDate"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/txtEnterDate"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IZMENI"
+            android:id="@+id/btn_update"
+            android:layout_below="@+id/txtEnterDate"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OBRISI"
+            android:id="@+id/btn_delete"
+            android:layout_below="@+id/txtEnterDate"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+
